@@ -1,0 +1,14 @@
+.env
+
+# Build output
+bin/
+obj/
+
+# Visual Studio and user-specific files
+.vs/
+*.user
+*.suo
+
+# Local environment files
+.env.*
+!.env.example
