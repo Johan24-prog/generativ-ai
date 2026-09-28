@@ -62,15 +62,15 @@ app.MapPost("/api/chat", (ChatRequest request, ILogger<Program> logger) =>
 
 app.Run();
 
-/// <summary>Innehåller användarens meddelande till AI:n.</summary>
+/// Innehåller användarens meddelande till AI:n.
 public sealed record ChatRequest
 {
-    /// <summary>Användarens fråga eller instruktion.</summary>
+    /// Användarens fråga eller instruktion.
     [System.ComponentModel.DataAnnotations.Required]
     [System.ComponentModel.DataAnnotations.StringLength(4000, MinimumLength = 1)]
     public required string Message { get; init; }
 }
 
-/// <summary>Innehåller AI:ns svar.</summary>
+/// Innehåller AI:ns svar.
 /// En färdig liten behållare för ett AI-svar, med ett fält som heter Message.
 public sealed record ChatResponse(string Message);

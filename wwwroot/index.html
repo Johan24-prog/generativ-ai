@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prata med AI</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">✦</div>
+        <div>
+          <p class="eyebrow">Azure AI</p>
+          <h1>Prata med AI</h1>
+        </div>
+        <span class="status-dot" title="Ansluten"></span>
+      </header>
+
+      <section class="chat-panel" aria-label="Chatt">
+        <div id="messages" class="messages" aria-live="polite">
+          <article class="message assistant-message">
+            <div class="avatar">AI</div>
+            <div class="bubble">Hej! Vad vill du veta eller få hjälp med?</div>
+          </article>
+        </div>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message-input"
+            >Skriv ett meddelande</label
+          >
+          <textarea
+            id="message-input"
+            name="message"
+            rows="1"
+            maxlength="4000"
+            placeholder="Skriv ett meddelande..."
+            required
+          ></textarea>
+          <button
+            id="send-button"
+            type="submit"
+            aria-label="Skicka meddelande"
+            title="Skicka meddelande"
+          >
+            <span aria-hidden="true">↑</span>
+          </button>
+        </form>
+        <p class="composer-note">Svar genereras av Azure OpenAI</p>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
